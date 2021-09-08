@@ -9,7 +9,7 @@ docker pull itsthanhtung/tina-face:2
    * [data/train2017](./data/train2017)
    * [data/out_annotation](./data/out_annotation)
    
-Mount data file in local to container directory /workspace/vedadet/data
+Mount data directory in local to container directory: /workspace/vedadet/data
 
 Example: 
 ```shell
@@ -20,11 +20,9 @@ docker run -it \
   		itsthanhtung/tina-face:2
 ```	
 
-wget https://github.com/ultralytics/yolov5/releases/download/v5.0/yolov5x6.pt
-### Yolov5m6 retrained model on License Plate dataset
-gdown https://drive.google.com/file/d/1wr4ObBBjMQ-PX1mClTNtn8fJRLSmLYZD/view?usp=sharing -O model.pt
-## Detection (auto label)
-python3 detect.py --weights model.pt --img 1280 --source image_paths
-
+### Run
+```shell
+CUDA_VISIBLE_DEVICES="0" python tools/infer.py --config ./configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py --path data/train2017 --out_path data/out_annotation
+```
 
 
