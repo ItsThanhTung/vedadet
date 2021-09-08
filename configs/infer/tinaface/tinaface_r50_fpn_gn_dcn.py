@@ -104,7 +104,7 @@ infer_engine = dict(
     use_sigmoid=use_sigmoid)
 
 # 4. weights
-weights = dict(filepath='your/weight/file/path')
+weights = dict(filepath='my_model')
 
 # 5. show
 class_names = ('face', )
