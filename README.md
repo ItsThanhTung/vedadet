@@ -3,7 +3,9 @@
 
 ------------
 ## Docker.
+```shell
 docker pull itsthanhtung/tina-face:2
+```
 ## Data file
 * [data](./data)
    * [data/train2017](./data/train2017)
