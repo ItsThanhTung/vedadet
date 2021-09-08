@@ -56,7 +56,7 @@ Modify model path in config file configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.
 ## Inference
 path là đường dẫn tới file ảnh cần inference
 
-out_path là folder các file kết quả infer (.txt) format: 80, x, y, w, h
+out_path là folder các file kết quả infer (.txt) format: 10, x, y, w, h
 
 out_img_path (optional) visualize ảnh đã được infer
 
