@@ -44,16 +44,16 @@ pip install -v -e .
 ```
 
 
-## Inference
-a. Download model
+### Inference
+## Download model
 
 Download Pretrained model: https://drive.google.com/uc?id=1zU738coEVDBkLBUa4hvJUucL7dcSBT7v (tinaface_r50_fpn_gn_dcn)
 
-b. Config
+## Config
 
 Modify model path in config file configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py
 
-b. Inference
+## Inference
 path là đường dẫn tới file ảnh cần inference
 
 out_path là folder các file kết quả infer (.txt) format: x, y, w, h
