@@ -67,6 +67,6 @@ Modify model path in config file configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.
 b. Inference
 
 ```shell
-CUDA_VISIBLE_DEVICES="0" python tools/infer.py configs/infer/retinanet/retinanet.py image_path
+CUDA_VISIBLE_DEVICES="0" python tools/infer.py --config configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py --path train2017 --out_path out_annotation --out_img_path out_image
 ```
 
