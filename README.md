@@ -6,10 +6,14 @@
 ```shell
 docker pull itsthanhtung/tina-face:2
 ```
-## Data file
+## Data folder
 * [data](./data)
    * [data/train2017](./data/train2017)
    * [data/out_annotation](./data/out_annotation)
+
+train2017: image folder
+out_annotation: result folder
+
    
 Mount data directory in local to container directory: /workspace/vedadet/data
 
