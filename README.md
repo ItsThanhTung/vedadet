@@ -44,17 +44,6 @@ pip install -v -e .
 ```
 
 
-## Test
-
-a. Config
-
-Modify some configuration accordingly in the config file like `configs/trainval/retinanet/retinanet.py`
-
-b. Test
-```shell
-CUDA_VISIBLE_DEVICES="0" python tools/test.py configs/trainval/retinanet/retinanet.py weight_path
-```
-
 ## Inference
 a. Download model
 
