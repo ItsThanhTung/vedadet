@@ -1,67 +1,27 @@
-## Installation
-### Requirements
-
-- Linux
-- Python 3.7+
-- PyTorch 1.6.0 or higher
-- CUDA 10.2 or higher
-
-We have tested the following versions of OS and softwares:
-
-- OS: Ubuntu 16.04.6 LTS
-- CUDA: 10.2
-- PyTorch 1.6.0
-- Python 3.8.5
-
-### Install vedadet
-
-a. Create a conda virtual environment and activate it.
-
-```shell
-conda create -n vedadet python=3.8.5 -y
-conda activate vedadet
-```
-
-b. Install PyTorch and torchvision following the [official instructions](https://pytorch.org/), *e.g.*,
-
-```shell
-conda install pytorch torchvision -c pytorch
-```
-
-c. Clone the vedadet repository.
-
-```shell
-git clone https://github.com/ItsThanhTung/vedadet.git
-cd vedadet
-vedadet_root=${PWD}
-```
-
-d. Install vedadet.
-
-```shell
-pip install -r requirements/build.txt
-pip install -v -e .
-```
+# Auto Label Using TinaFace
 
 
-### Inference
-## Download model
+------------
+## Docker.
+docker pull itsthanhtung/tina-face:2
+## Data file
+* [dir2](./data)
+   * [file21.ext](./data/train2017)
+   * [file22.ext](./data/out_annotation)
+   
+Mount data file in local to container directory /workspace/vedadet/data
 
-Download Pretrained model: https://drive.google.com/uc?id=1zU738coEVDBkLBUa4hvJUucL7dcSBT7v (tinaface_r50_fpn_gn_dcn)
+Example: docker run -it \
+		--gpus all \
+		--name tina \
+		--mount type=bind,source="home/tung/data"/target,target=/workspace/vedadet/data \
+  		itsthanhtung/tina-face:2
 
-## Config
-
-Modify model path in config file configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py
-
-## Inference
-path là đường dẫn tới folder ảnh cần inference
-
-out_path là folder các file kết quả infer (.txt) format: 10, x, y, w, h
-
-out_img_path (optional) visualize ảnh đã được infer
+wget https://github.com/ultralytics/yolov5/releases/download/v5.0/yolov5x6.pt
+### Yolov5m6 retrained model on License Plate dataset
+gdown https://drive.google.com/file/d/1wr4ObBBjMQ-PX1mClTNtn8fJRLSmLYZD/view?usp=sharing -O model.pt
+## Detection (auto label)
+python3 detect.py --weights model.pt --img 1280 --source image_paths
 
 
-```shell
-CUDA_VISIBLE_DEVICES="0" python tools/infer.py --config configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py --path train2017 --out_path out_annotation --out_img_path out_image
-```
 
