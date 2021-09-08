@@ -5,9 +5,9 @@
 ## Docker.
 docker pull itsthanhtung/tina-face:2
 ## Data file
-* [dir2](./data)
-   * [file21.ext](./data/train2017)
-   * [file22.ext](./data/out_annotation)
+* [data](./data)
+   * [data/train2017](./data/train2017)
+   * [data/out_annotation](./data/out_annotation)
    
 Mount data file in local to container directory /workspace/vedadet/data
 
