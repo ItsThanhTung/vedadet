@@ -42,7 +42,7 @@ def box_corner_to_center(img, left_top, right_bottom):
     cy = (y1 + y2) / 2
     w = x2 - x1
     h = y2 - y1
-    boxes = str(80) + " " + str(cx/width) + " " + str(cy/height) + " " + str(w/width) + " " + str(h/height) + "\n"
+    boxes = str(10) + " " + str(cx/width) + " " + str(cy/height) + " " + str(w/width) + " " + str(h/height) + "\n"
     return boxes
 
 def plot_result(result, imgfp, class_names, outfp='out.jpg', img_path = None):
