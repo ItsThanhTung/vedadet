@@ -31,7 +31,7 @@ conda install pytorch torchvision -c pytorch
 c. Clone the vedadet repository.
 
 ```shell
-git clone https://github.com/Media-Smart/vedadet.git
+git clone https://github.com/ItsThanhTung/vedadet.git
 cd vedadet
 vedadet_root=${PWD}
 ```
@@ -60,6 +60,7 @@ CUDA_VISIBLE_DEVICES="0" python tools/test.py configs/trainval/retinanet/retinan
 a. Config
 
 Modify some configuration accordingly in the config file like `configs/infer/retinanet/retinanet.py`
+Download Pretrained model: https://drive.google.com/uc?id=1zU738coEVDBkLBUa4hvJUucL7dcSBT7v
 
 b. Inference
 
