@@ -25,4 +25,5 @@ docker run -it \
 CUDA_VISIBLE_DEVICES="0" python tools/infer.py --config ./configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py --path data/train2017 --out_path data/out_annotation
 ```
 
+--out_img_path for result visualization
 
