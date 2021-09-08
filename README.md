@@ -11,11 +11,14 @@ docker pull itsthanhtung/tina-face:2
    
 Mount data file in local to container directory /workspace/vedadet/data
 
-Example: docker run -it \
+Example: 
+```shell
+docker run -it \
 		--gpus all \
 		--name tina \
 		--mount type=bind,source="home/tung/data"/target,target=/workspace/vedadet/data \
   		itsthanhtung/tina-face:2
+```	
 
 wget https://github.com/ultralytics/yolov5/releases/download/v5.0/yolov5x6.pt
 ### Yolov5m6 retrained model on License Plate dataset
