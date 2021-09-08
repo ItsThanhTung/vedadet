@@ -12,6 +12,7 @@ docker pull itsthanhtung/tina-face:2
    * [data/out_annotation](./data/out_annotation)
 
 train2017: image folder
+
 out_annotation: result folder
 
    
