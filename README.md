@@ -59,8 +59,8 @@ CUDA_VISIBLE_DEVICES="0" python tools/test.py configs/trainval/retinanet/retinan
 
 a. Config
 
-Modify some configuration accordingly in the config file like `configs/infer/retinanet/retinanet.py`
-Download Pretrained model: https://drive.google.com/uc?id=1zU738coEVDBkLBUa4hvJUucL7dcSBT7v
+Download Pretrained model: https://drive.google.com/uc?id=1zU738coEVDBkLBUa4hvJUucL7dcSBT7v (tinaface_r50_fpn_gn_dcn)
+Modify model path in config file configs/infer/tinaface/tinaface_r50_fpn_gn_dcn.py
 
 b. Inference
 
